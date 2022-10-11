@@ -2,18 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}" href="../static/css/style.css"/>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}" href="../../static/css/style.css"/>
     <title>Header</title>
 </head>
 <body>
-    <div class="nav" th:fragment="header">
-        <h1>Let's Party!</h1>
-        <div class="navbuttons">
-            <a class="buttonLook menuButton" th:href="@{/home}">home</a>
-            <a class="buttonLook menuButton" th:href="@{/venuelist}">venues</a>
-            <a class="buttonLook menuButton" th:href="@{/about}">about</a>
-            <a class="buttonLook menuButton" th:href="@{/pay}">pay</a>
-        </div>
+<div class="header" th:fragment="header">
+    <div class="nav">
+        <a class="buttonlook menubutton" th:href="@{/home}">Home</a>
+        <a class="buttonlook menubutton" th:href="@{/about}">About</a>
+        <a class="buttonlook menubutton" th:href="@{/venuelist}">Venuelist</a>
     </div>
+</div>
+
 </body>
 </html>

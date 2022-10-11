@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Venue detail by index</title>
+    <title>Venue details</title>
     <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}" href="../static/css/style.css"/>
 </head>
 <body>
-<div th:replace="fragments/header :: header">Header</div>
+<div th:replace="fragments/header :: header">header</div>
+
 <div class="border">
     <a th:href="@{|/venuedetailsbyindex/${prevIndex}|}" href="#" class="nextprev">&lt;</a>
 </div>
@@ -17,5 +18,4 @@
 <div class="border">
     <a th:href="@{|/venuedetailsbyindex/${nextIndex}|}" href="#" class="nextprev">&gt;</a>
 </div>
-</body>
 </html>
