@@ -12,6 +12,30 @@ p{
     color:#cccccc;
     font-size: 12px;
 }
+.filter{
+    list-style: none;
+    clear: both;
+    overflow: hidden;
+}
+.filter li a{
+    float:left;
+    background-color: #999999;
+    color: white;
+    display: block;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+.filter li .activefilter{
+    background-color: #555555;
+}
+
 
 
 
@@ -26,6 +50,8 @@ p{
     text-align: center;
     text-decoration: none;
 }
+
+
 
 .container{
     width:80%;
@@ -65,7 +91,7 @@ p{
     background-color: #999999;
     color: white;
     display: block;
-    width: 800px;
+    width: 500px;
     height: 50px;
     line-height: 50px;
     font-size: 18px;
