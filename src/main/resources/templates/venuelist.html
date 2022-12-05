@@ -12,24 +12,24 @@
     <a class="buttonLook filterButton" th:href="@{/venuelist}">-</a>
     <form>
         <div class="onefilter">
-            <input type="submit" value="search" class="buttonlook filterbutton">
+            <input type="submit" value="search" class="buttonlook filterButton">
         </div>
-        <h3>capacity</h3>
+        <h3>Capacity</h3>
         <div class="onefilter">
             <label for="minCapacity" class="filtername">min</label>
-            <input type="number" id="minCapacity" name="minCapacity" value="0" step="50"> persons
+            <input type="number" id="minCapacity" name="minCapacity" value="0" step="50">persons
         </div>
-
+        <div class="onefilter">
+            <label for="maxCapacity" class="filtername">max</label>
+            <input type="number" id="maxCapacity" name="maxCapacity" value="0" step="50">persons
+        </div>
     </form>
+
 </div>
 <div class="container">
     <h1>Venue list</h1>
-    <p> tekstje</p>
-    <ul class="filter">
-        <li><a th:classappend="${food}==1 ? activefilter : nofilter" href="/venuelist//1">Ja</a></li>
-        <li><a th:classappend="${food}==0 ? activefilter : nofilter" href="/venuelist/0">Nee</a></li>
-        <li><a th:classappend="${food}==2 ? activefilter : nofilter" href="/venuelist/2">Maakt niet uit</a></li>
-    </ul>
+
+
     <ul class="buttonlist">
         <li th:each="venue, iStat:${venues}">
             <a th:href="@{|/venuedetailsbyid/*{iStat.index +1}|}" th:text="|${venue.getVenueName()}|" href="">venue name</a>

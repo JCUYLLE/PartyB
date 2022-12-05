@@ -1,6 +1,6 @@
 html, body{
     font-family: Verdana;
-    background: #111111;
+    background: #864b6d;
     padding: 0;
     margin: 0;
 }
@@ -85,8 +85,16 @@ p{
 
 .buttonlist{
     list-style: none;
+    margin-left: fill;
+
+}
+filters{
+    background-color: #555555;
 }
 
+h3{
+    color: darkmagenta;
+}
 .buttonlist li a{
     background-color: #999999;
     color: white;

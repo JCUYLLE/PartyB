@@ -16,5 +16,20 @@
     </li>
   </ul>
 </div>
+  <div th:if="${showFilters}" class="filters">
+    <a class="buttonLook filterButton" th:href="@{/artiistlist}">-</a>
+    <form>
+      <div class="onefilter">
+        <input type="submit" value="search" class="buttonlook filterButton">
+      </div>
+      <h3>Keyword:</h3>
+      <div class="onefilter">
+        <label for="keyWord" class="filtername">keyword</label>
+        <input type="String" id="keyWord" name="keyWord">
+      </div>
+
+    </form>
+
+</div>
 </body>
 </html>
