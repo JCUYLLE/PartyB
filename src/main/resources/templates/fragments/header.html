@@ -7,11 +7,19 @@
 </head>
 <body>
 <div class="header" th:fragment="header">
-    <div class="nav">
-        <a class="buttonlook menubutton" th:href="@{/home}">Home</a>
-        <a class="buttonlook menubutton" th:href="@{/about}">About</a>
-        <a class="buttonlook menubutton" th:href="@{/venuelist}">Venuelist</a>
-        <a class="buttonlook menubutton" th:href="@{/artistlist}">Artistlist</a>
+    <div class="imgMF">
+        <img th:src="@{/img/Mechelen.png}" src="../img/Mechelen.png" alt="MechelenParty">
+    </div>
+    <div class ="nav">
+
+             <h1> Let's have a Party!</h1>
+        <div class="navbuttons">
+            <a class="buttonlook menubutton" th:href="@{/home}">Home</a>
+            <a class="buttonlook menubutton" th:href="@{/venuelist}">Venuelist</a>
+            <a class="buttonlook menubutton" th:href="@{/partylist}">Parties</a>
+            <a class="buttonlook menubutton" th:href="@{/artistlist}">Artistlist</a>
+            <a class="buttonlook menubutton" th:href="@{/about}">About</a>
+        </div>
     </div>
 </div>
 

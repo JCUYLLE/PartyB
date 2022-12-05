@@ -1,21 +1,79 @@
 html, body{
     font-family: Verdana;
-    background: #111111;
+    background: #753031;
     padding: 0;
     margin: 0;
 }
 h1{
-    color: deeppink;
-    font-size: 18px;
+    color: #44742d;
+    font-size: 42px;
+    margin-left: 10px;
 }
+h2{
+    color: #a9737b;
+}
+h3{
+    color: #c87225;
+}
+.nav{
+    overflow: hidden;
+    position: relative;
+    top:75px;
+}
+.aside {
+    width: 30%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: left;
+    font-style: italic;
+}
+.header{
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+.bottom{
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+.imgMF{
+    float: right;
+    margin-right: auto;
+}
+
 p{
     color:#cccccc;
     font-size: 12px;
 }
-.filter{
+.infoLineName {
+    width: 13em;
+    color: deeppink;
+}
+
+.infoLineValue {
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.row1 img {
+    width: 100%;
+    height: auto;
+    padding-left: 5px;
+}
+.row1{
+    padding: 10px;
+}
+
+.filters{
     list-style: none;
     clear: both;
     overflow: hidden;
+    margin: 25px 50px 0 0;
+    float: left;
+    width: 35%;
+    color: #44742d;
 }
 .filter li a{
     float:left;
@@ -36,11 +94,8 @@ p{
     background-color: #555555;
 }
 
-
-
-
 .buttonlook{
-    background-color: #999999;
+    background-color: #c87225;
     color: white;
     display: block;
     width: 150px;
@@ -49,19 +104,27 @@ p{
     font-size: 14px;
     text-align: center;
     text-decoration: none;
+    box-shadow: 1px 1px 1px darkgrey;
 }
-
-
-
+.buttonLook:active {
+    background-color: #dfa575;
+    color: #EDC7CF;
+}
+.onefilter {
+    display: flex;
+    margin: 10px 0;
+}
 .container{
     width:80%;
     margin-left:auto;
     margin-right: auto;
     float: left;
 }
-
+.venueExtraInfo {
+    font-size: small;
+}
 .buttonlook:hover{
-    background-color: deeppink;
+    background-color: #a9737b;
 }
 
 .menubutton{
@@ -69,40 +132,40 @@ p{
     margin-left: 10px;
 
 }
-
-.nav{
-    overflow: hidden;
-    position: relative;
-    top:170px;
-}
-
-.header{
-    background-image: url("../img/party_crowd_on_starburst_0401.jpg");
-    background-size: cover;
-    width: 100%;
-    height: 200px;
-}
-
 .buttonlist{
     list-style: none;
+    margin-left: fill;
+
+}
+filters{
+    background-color: #555555;
+    float: right;
+}
+.filterButton {
+    margin: 20px 0;
+    padding: .5em;
+    border: none;
+    font-size: medium;
+    color: #44742d;
 }
 
+
 .buttonlist li a{
-    background-color: #999999;
+    font-family: Arial;
+    background-color: #c87225;
     color: white;
     display: block;
     width: 500px;
     height: 50px;
     line-height: 50px;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
-    text-decoration: none;
     margin-bottom: 15px;
 }
 
 .nextprev{
     margin-top: 150px;
-    background-color: deeppink;
+    background-color: #44742d;
     display: block;
     width: 20px;
     line-height: 20px;
@@ -115,7 +178,7 @@ p{
 }
 
 .nextprev:hover{
-    background-color: magenta;
+    background-color: #44742d;
     width: 25px;
     font-size: 25px;
     line-height: 25px;
@@ -127,7 +190,7 @@ p{
     float: left;
 }
 .buttonlist li a:hover{
-    background-color: deeppink;
+    background-color: #c87225;
 }
 .linkerkantvenuedetails{
     float:left;
@@ -136,6 +199,42 @@ p{
 .rechterkantvenuedetails{
     float:left;
     width:50%;
+}
+a.largeButton {
+    width: 200px;
+    font-size: 2em;
+    padding: 1em;
+}
+
+
+a.mediumButton {
+    display: block;
+    margin: 10px auto;
+    width: 400px;
+    font-size: 1.2em;
+    padding: 1em;
+    background-color: #c87225;
+    color: #44742d;
+}
+a.smallButton {
+    background-color: #c87225;
+    display: block;
+    width: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    float: right;
+
+}
+
+.venueExtraInfo {
+    font-size: small;
+}
+.editButtonDiv {
+    position: absolute;
+    right: 60px;
 }
 .sublist{
     height: 45px;

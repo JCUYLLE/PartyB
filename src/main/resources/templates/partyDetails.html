@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}" href="../static/css/style.css"/>
+  <title>Let's Party!</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header">Header</div>
+
+
+<div class="row1">
+  <div class="row1content" th:if="${party}" th:object="${party}">
+
+    <div class="prevButtonDiv">
+      <a class="buttonLook smallButton" th:href="@{|/partydetails/${party.id}/prev|}">&lt;</a>
+    </div>
+    <div class="nextButtonDiv">
+      <a class="buttonLook smallButton" th:href="@{|/partydetails/${party.id}/next|}">&gt;</a>
+    </div>
+    <div class="editButtonDiv">
+      <a th:href="@{|/admin/partyedit/*{id}|}" class="buttonLook smallButton">edit</a>
+    </div>
+
+
+    <h2 th:text="*{name}">partydetails</h2>
+
+    <h3>
+      <span th:text="*{#dates.format(date, 'dd/MM/yyyy')}">date</span>
+      in
+      <a th:href="@{|/venuedetails/*{venue.id}|}" th:text="*{venue.venueName}" class="linkLook">venue</a>
+    </h3>
+
+    <div class="venueinfo">
+      <div class="infoLine" th:unless="*{pricePresaleInEur!=null || priceInEur!=null}">
+        Free Party!
+      </div>
+      <div class="infoLine">
+        <div class="infoLineName">where:</div>
+        <div class="infoLineValue"
+             th:text="|*{venue.city} (*{venue.distanceFromPublicTransportInKm} km from public transport)|">
+          city and distance
+        </div>
+      </div>
+      <div class="infoLine" th:if="*{pricePresaleInEur!=null || priceInEur!=null}">
+        <div class="infoLineName">price:</div>
+        <!--suppress SyntaxError -->
+        <div class="infoLineValue"
+             th:text="|*{pricePresaleInEur}${'&euro;'} (presale) / *{priceInEur}${'&euro;'}|">
+          pricePresaleInEur and price
+        </div>
+      </div>
+      <div class="infoLine">
+        <div class="infoLineName">doors</div>
+        <div class="infoLineValue" th:text="*{#dates.format(doors, 'HH:mm')}">doors</div>
+      </div>
+      <div class="infoLine" th:if="*{!extraInfo.isBlank()}">
+        <div class="infoLineName">extra info</div>
+        <div class="infoLineValue" th:text="*{extraInfo}">extraInfo</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row1content" th:unless="${party}">
+    <p>no party was chosen</p>
+  </div>
+</div>
+<div class="row1">
+  <div class="row1content">
+    <h2>line up: </h2>
+
+    <div class="venuelist">
+      <div th:each="artist:${party.artists}">
+        <a class="buttonLook mediumButton" th:href="@{|/artistdetails/${artist.id}|}">
+          <span th:text="${artist.artistName}">artist name </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row1">
+  <div class="row1content">
+    <h2>wie gaat? </h2>
+
+    <div class="venuelist">
+      <div th:each="animal:${party.animals}">
+        <a class="buttonLook mediumButton" th:href="@{|/animaldetails/${animal.id}|}">
+          <span th:text="${animal.name}">animal name </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div th:replace="fragments/footer :: footer">Footer</div>
+
+</body>
+</html>

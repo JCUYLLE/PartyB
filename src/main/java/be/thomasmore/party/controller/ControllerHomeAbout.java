@@ -10,7 +10,6 @@ public class ControllerHomeAbout {
 
     @GetMapping(value = {"/", "/home", "/home/"})
     public String home (Model model){
-        model.addAttribute("mySpecialNumber",mySpecialNumber);
         return "home";
     }
 

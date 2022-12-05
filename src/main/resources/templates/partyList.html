@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}" href="../static/css/style.css"/>
+  <title>Let's Party!</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header">Header</div>
+
+
+<div class="row1">
+  <div class="row1content">
+    <div class="editButtonDiv">
+      <a th:href="@{|/admin/partynew|}" class="buttonLook smallButton">new</a>
+    </div>
+
+    <h2>parties</h2>
+    <div class="cols2">
+      <div class="filters"></div>
+      <div class="venuelist">
+        <div th:each="party:${parties}">
+          <a class="buttonLook mediumButton" th:href="@{|/partydetails/${party.id}|}">
+            <span th:text="${party.name}">party name </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div th:replace="fragments/footer :: footer">Footer</div>
+
+</body>
+</html>
